@@ -464,7 +464,7 @@ def main(page: ft.Page):
                     padding = ft.padding.all(1),
                 ),
                 ft.Container(
-                    content=ft.Text("ALESSIO CURCIO", size=23, weight=ft.FontWeight.BOLD, text_align=ft.TextAlign.CENTER, color=ft.Colors.BLACK),
+                    content=ft.Text("ALESSIO CURCIO", size=21, weight=ft.FontWeight.BOLD, text_align=ft.TextAlign.CENTER, color=ft.Colors.BLACK),
                     alignment=ft.alignment.center
                     ),
                 ft.Container(
@@ -493,7 +493,7 @@ def main(page: ft.Page):
             content = ft.Column(
             controls=[
                 ft.Container(content=ft.Text("Skills / Experiences", weight=ft.FontWeight.BOLD, size=16, color=ft.Colors.BLACK),
-                             margin=ft.margin.only(left=12, top=6, right=12), bgcolor = "#deb887", padding=ft.padding.all(6), border_radius=ft.border_radius.all(10),
+                             margin=ft.margin.only(left=12, top=20, right=12), bgcolor = "#deb887", padding=ft.padding.all(6), border_radius=ft.border_radius.all(10),
                              ),
                 ft.Container(
                                 content=ft.Text("Education", size = 14, weight=ft.FontWeight.BOLD, color=ft.Colors.BLACK, text_align=ft.TextAlign.LEFT),
@@ -773,19 +773,24 @@ def main(page: ft.Page):
                 ft.Container(content=ft.Text("Contacts", weight=ft.FontWeight.BOLD, size=16, color=ft.Colors.BLACK),
                              margin=ft.margin.only(left=12, top=6, right=12), bgcolor = "#deb887", padding=ft.padding.all(6), border_radius=ft.border_radius.all(10)
                              ),
-                ft.Container(content=ft.Text("Rome, Ciampino · +39 3711712524 · alessio.curcio04@gmail.com", size=12, color=ft.Colors.BLACK, weight=ft.FontWeight.W_600), margin=ft.margin.only(left=12, right=12, top=4, bottom=6),
-                             alignment=ft.alignment.center
-                             ),
-                ft.Row(
-                    controls=[
-                        ft.Container(
+                ft.Container(
+                    content=ft.Column(
+                            controls=[
+                                ft.Text("Rome, Ciampino", size=12, color=ft.Colors.BLACK, weight=ft.FontWeight.W_600),
+                                ft.Text("+39 3711712524", size=12, color=ft.Colors.BLACK, weight=ft.FontWeight.W_600),
+                                ft.Text("alessio.curcio@example.com", size=12, color=ft.Colors.BLACK, weight=ft.FontWeight.W_600)
+                            ]
+                    ),
+                    margin=ft.margin.only(left=18, top=6, right = 18)
+                ),
+                ft.Container(
                                 content = ft.Row(
                                 controls = [
                                     ft.Image("linkedin.png", height = 12, fit=ft.ImageFit.COVER),
                                     ft.TextButton("Alessio Curcio", on_click= lambda e: page.launch_url("https://www.linkedin.com/in/alessio-curcio-7787b935a"),style=ft.ButtonStyle(color=ft.Colors.BLACK, text_style=ft.TextStyle(weight=ft.FontWeight.W_600, size = 12)) )
                                 ]
                             ),
-                                margin=ft.margin.only(left=12,bottom = 25)
+                                margin=ft.margin.only(left=18)
                             ),
                             ft.Container(
                                 content = ft.Row(
@@ -794,11 +799,9 @@ def main(page: ft.Page):
                                     ft.TextButton("Crucio104", on_click= lambda e: page.launch_url("https://github.com/Crucio104"),style=ft.ButtonStyle(color=ft.Colors.BLACK, text_style=ft.TextStyle(weight=ft.FontWeight.W_600, size = 12)), )
                                 ]
                             ),
-                                margin=ft.margin.only(left=12, bottom = 25)
+                                margin=ft.margin.only(left=18, bottom = 25)
                             ),
-                    ],
-                    alignment=ft.MainAxisAlignment.CENTER
-                )
+
                             
                 
             ],
