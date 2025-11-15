@@ -458,7 +458,7 @@ def main(page: ft.Page):
             content = ft.Column(
             controls=[
                 ft.Container(
-                    content=ft.Image(src="Profile Image.png", height=IMG_H, fit=ft.ImageFit.FIT_HEIGHT, border_radius=ft.border_radius.all(15)),
+                    content=ft.Image(src="Profile Image.png", height=IMG_H*1.3, fit=ft.ImageFit.FIT_HEIGHT, border_radius=ft.border_radius.all(15)),
                     alignment=ft.alignment.center,
                     margin=ft.margin.only(top=12),
                     padding = ft.padding.all(1),
